@@ -15,7 +15,7 @@ namespace ukol1_af
         double _vysledekMesicne = 0;
         double _vysledekRocne = 0;
         public int VyseUveru { get; set; }
-        public float UrokovaSazba { get; set; }
+        public double UrokovaSazba { get; set; }
         public int DobaSplaceni { get; set; }
         public double VysledekMesicne
         {
