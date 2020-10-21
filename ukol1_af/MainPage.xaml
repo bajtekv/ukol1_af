@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ukol1_af.MainPage">
+
+    <StackLayout>
+        <Label Text="Výpočet hypotéky"
+               FontSize="22"
+               HorizontalOptions="Center"/>
+        <Entry  Text="{Binding VyseUveru}" Placeholder="Výše úvěru" Keyboard="Numeric"></Entry>
+        <Entry Text="{Binding UrokovaSazba}" MaxLength="4" Placeholder="Úroková Sazba" Keyboard="Numeric"></Entry>
+        <Entry Text="{Binding DobaSplaceni}" Placeholder="Doba splácení v letech" Keyboard="Numeric"></Entry>
+        <Button Text="Vypočítat" Command="{Binding Vypocet}" />
+        <Label Text="{Binding Path=VysledekMesicne, StringFormat='Měsíční splátka: {0:C2}'}" />
+        <Label Text="{Binding Path=VysledekCelkem, StringFormat='Celkem zaplatíte: {0:C2}'}" />
+    </StackLayout>
+    
+</ContentPage>
